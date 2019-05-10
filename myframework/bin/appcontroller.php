@@ -60,7 +60,7 @@ class AppController{
 
 
     public function getView($page,$data=array()){
-
+        
         require_once './views/'.$page.".php";
 
     }
