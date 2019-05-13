@@ -1,18 +1,19 @@
 <?php 
-class welcome extends AppController{
+class api extends AppController{
 
     public function __construct($parent){
         $this->parent=$parent;
     }
-    public function home(){
-        //echo "hello";
+
+    public function about(){
         $data = array();
-        $data["pagename"]= "home";
+        $data["pagename"]= "api";
         $data["navigation"] = array("home"=>"/welcome/home", "api"=>"/api/about", "crud"=>"/crud/about");
-        
+        $data["color"] = "red";
+
         $this->parent->getView("navigation",$data);
         $this->parent->getView("header");
-        $this->parent->getView("welcome");
+        $this->parent->getView("apiView");
         $this->parent->getView("footer");
     }
 }
