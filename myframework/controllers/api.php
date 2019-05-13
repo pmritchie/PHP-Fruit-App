@@ -13,7 +13,7 @@ class api extends AppController{
 
         $this->parent->getView("navigation",$data);
         $this->parent->getView("header");
-        $this->parent->getView("welcome");
+        $this->parent->getView("apiView");
         $this->parent->getView("footer");
     }
 }
