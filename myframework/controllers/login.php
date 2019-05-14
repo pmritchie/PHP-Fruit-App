@@ -1,18 +1,18 @@
 <?php 
-class welcome extends AppController{
+class login extends AppController{
 
     public function __construct($parent){
         $this->parent=$parent;
     }
-    public function home(){
-        //echo "hello";
+    public function form(){
         $data = array();
-        $data["pagename"]= "home";
+        $data["pagename"]= "sign_in";
         $data["navigation"] = array("home"=>"/welcome/home", "api"=>"/api/about", "crud"=>"/crud/about", "sign_in"=>"/login/form");
         
-        $this->parent->getView("navigation",$data);
+        
         $this->parent->getView("header");
-        $this->parent->getView("welcome");
+        $this->parent->getView("navigation",$data);
+        $this->parent->getView("signInForm");
         $this->parent->getView("footer");
     }
 }
