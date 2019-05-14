@@ -8,8 +8,8 @@ class api extends AppController{
     public function about(){
         $data = array();
         $data["pagename"]= "api";
-        $data["navigation"] = array("home"=>"/welcome/home", "api"=>"/api/about", "crud"=>"/crud/about");
-        $data["color"] = "red";
+        $data["navigation"] = array("home"=>"/welcome/home", "api"=>"/api/about", "crud"=>"/crud/about", "sign_in"=>"/login/form");
+        
 
         $this->parent->getView("navigation",$data);
         $this->parent->getView("header");
