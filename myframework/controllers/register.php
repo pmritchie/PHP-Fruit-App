@@ -1,5 +1,5 @@
-<?php 
-class login extends AppController{
+ <?php 
+class register extends AppController{
 
     public function __construct($parent){
         $this->parent=$parent;
@@ -7,7 +7,7 @@ class login extends AppController{
     public function form(){
         $data = array();
         $data["pagename"]= "sign_in";
-        $data["navigation"] = array("home"=>"/welcome/home", "api"=>"/api/about", "crud"=>"/crud/about", "sign_in"=>"/login/form");
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud/about", "register"=>"/welcome/register");
         
         
         $this->parent->getView("header");
