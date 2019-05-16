@@ -1,3 +1,5 @@
+<section class="container">
+<div class="col-5 offset-md-3 row align-items-center">
 <form class="container m-3 needs-validation" action="/welcome/regComplete" method="POST" novalidate>
   <div class="form-group ">
     <label for="validationCustom01">Email address</label>
@@ -29,6 +31,7 @@
   <label class="custom-control-label" for="customControlValidation3">Opt Out</label>
   <div class="invalid-feedback">Please select one</div>
 </div>
+<br>
 
 <div class="form-group">
   <select class="custom-select" required>
@@ -48,9 +51,11 @@
     <input type="checkbox" class="form-check-label" id="exampleCheck1">
     <label class="form-check-label m1" for="exampleCheck1">I want to recieve the newsletter</label>
   </div>
+  <br>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
+</div>
+</section>
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
