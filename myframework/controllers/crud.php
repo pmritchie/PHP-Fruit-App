@@ -9,7 +9,7 @@ class crud extends AppController{
         //echo "hello";
         $data = array();
         $data["pagename"]= "crud";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud/about", "register"=>"/welcome/register");
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud/about", "register"=>"/welcome/register","login"=>"/login/login");
         $data["color"] = "red";
 
         $this->parent->getView("header");
