@@ -27,7 +27,7 @@ class welcome extends AppController{
     }
     public function login(){
         $data = array();
-        $data["pagename"]= "";
+        $data["pagename"]= "login";
         $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud/about", "register"=>"/welcome/register", "login"=>"/welcome/login");
         $this->parent->getView("header");
         $this->parent->getView("navigation",$data);

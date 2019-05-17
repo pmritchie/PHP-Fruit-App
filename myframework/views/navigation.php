@@ -25,6 +25,27 @@
 ?>
           
         </ul>
+        <span style="color: red"><?=@$_REQUEST["msg"]?@$_REQUEST["msg"]:'';?></span>
+        <?if(@$_SESSION["loggedin"] && @$_SESSION["loggedin"]==1){?>
+        <form class="navbar-form navbar-right">
+          <a href="/profile">Profile</a>
+          <a href="/auth/logout">Logout</a>
+        </form>
+
+  <?}else{?>
+ <div class="container mt-1">
+    <form class="form-inline" method="post" action="/auth/login">
+      <div class="form-group">
+        <input type="email" class="form-control mr-1" id="email" name="username" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-default text-secondary">LOGIN</button>
+    </form>
+  </div>  
+
+  <?}?>
       </div>
     </div>
   </nav>
