@@ -7,15 +7,31 @@ class auth extends AppController{
     public function login(){
         
         if($_REQUEST["username"] && $_REQUEST["password"]){
-
-            if($_REQUEST["username"]=="bob@saget.com" && $_REQUEST["password"]=="password"){
-                $_SESSION["loggedin"]=1;
-                header("Location:/welcome");
+            //$myfile = fopen("./assets/accounts.txt", "r") or die("Unable to open file!");
+            $myfile = "./assets/accounts.txt";
+            if(file_exists($myfile)){
+                $profiles = file($myfile);
+                
+                foreach($profiles as $user){
+                $userArray = explode("|", $user);
+                if($_REQUEST["username"] == $userArray[0] && $_REQUEST["password"]==$userArray[1]){
+                    $_SESSION["loggedin"] = 1;
+                    $_SESSION["bio"] = $userArray[2];
+                    $_SESSION["username"] = $userArray[0];
+                    header("Location:/profile");
+                }else{
+                    echo "<br><br><h2>Username or password did not match</h2>";
+                    echo "<br><br><br><a href='/welcome/index'>Click here to go back</a>";
+                }
+                
+                }
             }else{
-                header("Location:/welcome?msg=Bad Login");
+                echo"not reading the file";
             }
+              
         }else{
-            header("Location:/welcome?msg=Bad Login");
+            echo "<br><br><h2>You need a username and password</h2>";
+            echo "<br><br><br><a href='/welcome/index'>Click here to go back</a>";
         }
     }
     public function logout(){

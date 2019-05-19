@@ -34,6 +34,8 @@
 
   <?}else{?>
  <div class="container mt-1">
+
+
     <form class="form-inline" method="post" action="/auth/login">
       <div class="form-group">
         <input type="email" class="form-control mr-1" id="email" name="username" placeholder="Email">
