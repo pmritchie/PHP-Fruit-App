@@ -33,6 +33,7 @@
     <label for="validationCustom02">Password</label>
     <input type="password" name="password" class="form-control" id="validationCustom02" placeholder="Password" required>
   </div>
+
   <input type="button" value ="Login" class="btn btn-primary" id="signIn"/>
 </form>
 </div>
