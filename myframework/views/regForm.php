@@ -1,7 +1,6 @@
 <section class="container">
-<div class="col-5 offset-md-3 row align-items-center">
+  <div class="col-5 offset-md-3 row align-items-center">
 <?
-
 function create_image($cap){
     unlink("./assets/image1.png");
     global $image;
@@ -19,11 +18,7 @@ function create_image($cap){
     }
     $text_color = imagecolorallocate($image, 0, 0, 0);
     ImageString($image, 22, 30, 22, $cap, $text_color);
-/************************************/
-
     $_SESSION["cap"] = $cap;
-
-/*************************************/
     imagepng($image, "./assets/image1.png");
 }
   create_image($data["cap"]);
@@ -49,23 +44,23 @@ function create_image($cap){
     <textarea name="bio" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <div class="custom-control custom-radio">
-  <input class="custom-control-input" type="radio" name="radio-stacked" id="customControlValidation1" value="option1" required>
-  <label class="custom-control-label" for="customControlValidation1">Female</label>
-</div>
-<div class="custom-control custom-radio">
-  <input type="radio" class="custom-control-input"  name="radio-stacked" id="customControlValidation2" value="option2" required>
-  <label class="custom-control-label" for="customControlValidation2">Male</label>
-</div>
-<div class="custom-control custom-radio">
-  <input type="radio" class="custom-control-input"  name="radio-stacked" id="customControlValidation3" value="option2" required>
-  <label class="custom-control-label" for="customControlValidation3">Opt Out</label>
-  <div class="invalid-feedback">Please select one</div>
-</div>
+    <input class="custom-control-input" type="radio" name="radio-stacked" id="customControlValidation1" value="option1" required>
+    <label class="custom-control-label" for="customControlValidation1">Female</label>
+  </div>
+  <div class="custom-control custom-radio">
+    <input type="radio" class="custom-control-input"  name="radio-stacked" id="customControlValidation2" value="option2" required>
+    <label class="custom-control-label" for="customControlValidation2">Male</label>
+  </div>
+  <div class="custom-control custom-radio">
+    <input type="radio" class="custom-control-input"  name="radio-stacked" id="customControlValidation3" value="option2" required>
+    <label class="custom-control-label" for="customControlValidation3">Opt Out</label>
+    <div class="invalid-feedback">Please select one</div>
+  </div>
 <br>
 
-<div class="form-group">
-  <select class="custom-select" required>
-  <option value="">Select Age</option>
+  <div class="form-group">
+    <select class="custom-select" required>
+    <option value="">Select Age</option>
 <? 
     for($i = 13; $i < 100; $i++){
 ?>
@@ -73,9 +68,9 @@ function create_image($cap){
 <? 
 }
 ?> 
-  </select>
-  <div class="invalid-feedback">Example invalid custom select feedback</div>
-</div>
+    </select>
+    <div class="invalid-feedback">Example invalid custom select feedback</div>
+  </div>
 
   <div class="form-check">
     <input type="checkbox" class="form-check-label" id="exampleCheck1">

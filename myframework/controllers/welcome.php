@@ -40,7 +40,7 @@ class welcome extends AppController{
         $this->parent->getView("footer");
     }
     public function ajaxPar(){
-        if(@$_REQUEST["email"]=="bob@saget.com"){
+        if(@$_REQUEST["email"]=="bob@saget.com" && @$_REQUEST["password"]=="password"){
             echo"welcome";
         }else{
             echo"nope";

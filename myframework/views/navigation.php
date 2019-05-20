@@ -6,6 +6,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+
 <?
     foreach($data["navigation"] as $key=>$link){
         if($data["pagename"] == $key){
@@ -33,21 +34,18 @@
         </form>
 
   <?}else{?>
- <div class="container mt-1">
-
-
-    <form class="form-inline" method="post" action="/auth/login">
-      <div class="form-group">
-        <input type="email" class="form-control mr-1" id="email" name="username" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-      </div>
-      <button type="submit" class="btn btn-default text-secondary">LOGIN</button>
-    </form>
-  </div>  
-
+    <div class="container mt-1">
+      <form class="form-inline" method="post" action="/auth/login">
+        <div class="form-group">
+          <input type="email" class="form-control mr-1" id="email" name="username" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default text-secondary">LOGIN</button>
+      </form>
+    </div>  
   <?}?>
-      </div>
     </div>
-  </nav>
+  </div>
+</nav>
