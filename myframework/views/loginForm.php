@@ -20,24 +20,22 @@
 </script>
 
 <section class="jumbotron vertical-center">
-<div class="container">
-
-<div class="col-5 offset-md-3 align-items-center">
-<form class="container m-3 needs-validation" action="/welcome/index" method="POST" novalidate>
-  <div class="form-group">
-    <label for="validationCustom01">Email address</label>
-    <input type="email" name="email" class="form-control" id="validationCustom01" aria-describedby="emailHelp" placeholder="Enter email" required>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <div class="container">
+    <div class="col-5 offset-md-3 align-items-center">
+      <form class="container m-3 needs-validation" action="/welcome/index" method="POST" novalidate>
+        <div class="form-group">
+          <label for="validationCustom01">Email address</label>
+          <input type="email" name="email" class="form-control" id="validationCustom01" aria-describedby="emailHelp" placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="validationCustom02">Password</label>
+          <input type="password" name="password" class="form-control" id="validationCustom02" placeholder="Password" required>
+        </div>
+        <input type="button" value ="Login" class="btn btn-primary" id="signIn"/>
+      </form>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="validationCustom02">Password</label>
-    <input type="password" name="password" class="form-control" id="validationCustom02" placeholder="Password" required>
-  </div>
-
-  <input type="button" value ="Login" class="btn btn-primary" id="signIn"/>
-</form>
-</div>
-</div>
 </section>
 
 
