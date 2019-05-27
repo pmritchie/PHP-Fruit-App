@@ -31,7 +31,7 @@ class fruitModel{
       }
 
       public function updateList($obj){
-        var_dump($obj);
+        echo($obj);
         $sql = 'update fruit_table set name = :name where id = :id';
         $stmt = $this->parent->db->prepare($sql);
         $stmt->execute(array(":name"=>$obj["name"], ":id"=>$obj["id"]));

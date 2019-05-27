@@ -13,9 +13,9 @@ class auth extends AppController{
                 
             if($data){
                 $_SESSION["loggedin"] =1;
-                header("Location:/welcome");
+                header("Location:/welcome/index");
             }else{
-                header("Location:/welcome?msg=Bad Login");
+                header("Location:/welcome?msg= Bad Login");
             }
         }
 
