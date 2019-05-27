@@ -37,7 +37,7 @@ class crud extends AppController{
     }
 
     public function delete(){
-        var_dump($_REQUEST['id']);
+        
         $this->parent->getModel("fruitModel")->delete($_REQUEST['id']);
         header("location:/crud");
     }
@@ -49,12 +49,15 @@ class crud extends AppController{
         $this->parent->getView("header");
         $this->parent->getView("navigation",$data);
         echo"<br>";
+       
         $this->parent->getView("editForm",$data["fruit"]);
     }
 
     public function editList(){
+        
         $this->parent->getModel("fruitModel")->updateList($_POST);
         header("location:/crud");
+        
     }
 }
 
