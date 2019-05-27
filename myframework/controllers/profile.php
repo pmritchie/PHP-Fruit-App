@@ -13,7 +13,7 @@ class profile extends AppController{
     public function index(){
         $data = array();
         $data["pagename"]= "home";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud/about", "register"=>"/welcome/register", "login"=>"/welcome/login");
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud", "register"=>"/welcome/register",);
 
     
        
@@ -29,7 +29,7 @@ class profile extends AppController{
     public function update(){
         $data = array();
         $data["pagename"]= "home";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud/about", "register"=>"/welcome/register", "login"=>"/welcome/login");
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud", "register"=>"/welcome/register",);
 
         if($_FILES["img"]["name"]!=""){
             $imageFileType = pathinfo("assets/".$_FILE["img"]["name"], PATHINFO_EXTENSION);
