@@ -9,7 +9,7 @@ class crud extends AppController{
         //echo "hello";
         $data = array();
         $data["pagename"]= "DB";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud", "register"=>"/welcome/register",);
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api", "crud"=>"/crud", "register"=>"/welcome/register",);
         
         $data["fruits"]= $this->parent->getModel("fruitModel")->get();
 
@@ -24,7 +24,7 @@ class crud extends AppController{
     public function addForm(){
         $data = array();
         $data["pagename"]= "DB";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud", "register"=>"/welcome/register",);
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api", "crud"=>"/crud", "register"=>"/welcome/register",);
         $this->parent->getView("header");
         $this->parent->getView("navigation",$data);
         echo"<br>";
@@ -45,7 +45,7 @@ class crud extends AppController{
         $data = array();
         $data["fruit"]= $this->parent->getModel("fruitModel")->getOne($_REQUEST["id"]);
         $data["pagename"]= "edit";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud", "register"=>"/welcome/register",);
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api", "crud"=>"/crud", "register"=>"/welcome/register",);
         $this->parent->getView("header");
         $this->parent->getView("navigation",$data);
         echo"<br>";

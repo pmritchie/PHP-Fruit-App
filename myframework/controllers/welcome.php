@@ -9,7 +9,7 @@ class welcome extends AppController{
         //echo "hello";
         $data = array();
         $data["pagename"]= "home";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud", "register"=>"/welcome/register",);
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api", "crud"=>"/crud", "register"=>"/welcome/register",);
 
         $this->parent->getView("header");
         $this->parent->getView("navigation",$data);
@@ -19,7 +19,7 @@ class welcome extends AppController{
     public function register(){
         $data = array();
         $data["pagename"]= "register";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud", "register"=>"/welcome/register",);
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api", "crud"=>"/crud", "register"=>"/welcome/register",);
         
         $this->parent->getView("header");
         $this->parent->getView("navigation",$data);
@@ -33,7 +33,7 @@ class welcome extends AppController{
     public function login(){
         $data = array();
         $data["pagename"]= "login";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud", "register"=>"/welcome/register",);
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api", "crud"=>"/crud", "register"=>"/welcome/register",);
         $this->parent->getView("header");
         $this->parent->getView("navigation",$data);
         $this->parent->getView("loginForm");
@@ -49,7 +49,7 @@ class welcome extends AppController{
     public function regComplete(){
         $data = array();
         $data["pagename"]= "";
-        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api/about", "crud"=>"/crud", "register"=>"/welcome/register",);
+        $data["navigation"] = array("home"=>"/welcome/index", "api"=>"/api", "crud"=>"/crud", "register"=>"/welcome/register",);
         
         $this->parent->getView("header");
         $this->parent->getView("navigation",$data);
